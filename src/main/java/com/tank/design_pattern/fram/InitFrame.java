@@ -7,6 +7,7 @@ import java.awt.event.WindowEvent;
 /**
  * @Auther: xuli
  * @Description: init frame and new a frame window
+ * push test
  * @Date: 2024-03-05
  */
 public class InitFrame {
