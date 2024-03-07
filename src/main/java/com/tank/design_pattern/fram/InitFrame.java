@@ -7,16 +7,11 @@ import java.awt.event.WindowEvent;
 /**
  * @Auther: xuli
  * @Description: init frame and new a frame window
- * push test
- * IDEA push
- *
- * again idea push
- * sdfsdfsdf
  * @Date: 2024-03-05
  */
 public class InitFrame {
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         Frame f  = new Frame();
         // set window's size
         f.setSize(800,600);
@@ -41,6 +36,16 @@ public class InitFrame {
                 System.exit(0);
             }*/
         });
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        TankFrame tf = new TankFrame();
+
+        // 自动 动
+        while(true){
+            Thread.sleep(50);
+            tf.repaint();
+        }
     }
 }
 
