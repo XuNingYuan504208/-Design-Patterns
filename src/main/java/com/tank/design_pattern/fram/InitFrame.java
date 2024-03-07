@@ -8,8 +8,7 @@ import java.awt.event.WindowEvent;
  * @Auther: xuli
  * @Description: init frame and new a frame window
  * push test
- *
- *again push
+ * IDEA push
  * sdfsdfsdf
  * @Date: 2024-03-05
  */
