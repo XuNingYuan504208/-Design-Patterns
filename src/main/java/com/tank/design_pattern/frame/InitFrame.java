@@ -1,4 +1,4 @@
-package com.tank.design_pattern.fram;
+package com.tank.design_pattern.frame;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;

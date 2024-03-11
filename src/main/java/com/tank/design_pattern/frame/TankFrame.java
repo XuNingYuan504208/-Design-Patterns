@@ -1,4 +1,4 @@
-package com.tank.design_pattern.fram;
+package com.tank.design_pattern.frame;
 
 import com.tank.design_pattern.model.enums.Direction;
 
@@ -8,6 +8,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import static com.tank.design_pattern.model.enums.Direction.*;
+
 /**
  * @Description:
  * @Author: NY
@@ -15,9 +17,12 @@ import java.awt.event.WindowEvent;
  **/
 public class TankFrame extends Frame {
     private static final int SPEED = 10;
-    int x = 200 , y= 200;
+//    int x = 200 , y= 200;
+//    Direction dir = Direction.DOWN;
 
-    Direction dir = Direction.DOWN;
+    // 面向对象的封装过程
+    Tank myTank = new Tank(200,200,Direction.DOWN);
+    Tank yTank = new Tank(200,200,Direction.DOWN);
 
     public TankFrame() {
         setSize(800, 600);
@@ -40,8 +45,9 @@ public class TankFrame extends Frame {
 
     @Override
     public void paint(Graphics g) {
+        myTank.paint(g);
 //        System.out.println("paint function ...");
-        g.fillRect(x,y,50,50);
+        /*g.fillRect(x,y,50,50);
         switch (dir){
             case LEFT:
                 x -= SPEED;
@@ -57,7 +63,7 @@ public class TankFrame extends Frame {
                 break;
             default:
                 break;
-        }
+        }*/
 //        x+=10;
 //        y+=10;
     }
@@ -134,16 +140,20 @@ public class TankFrame extends Frame {
          */
         private void setMainTankDir() {
             if(bL) {
-                dir = Direction.LEFT;
+//                dir = LEFT;
+                myTank.setDir(LEFT);
             }
             if(bR) {
-                dir = Direction.RIGHT;
+//                dir = RIGHT;
+                myTank.setDir(RIGHT);
             }
             if(bU) {
-                dir = Direction.UP;
+//                dir = Direction.UP;
+                myTank.setDir(UP);
             }
             if(bD) {
-                dir = Direction.DOWN;
+//                dir = Direction.DOWN;
+                myTank.setDir(DOWN);
             }
         }
     }
