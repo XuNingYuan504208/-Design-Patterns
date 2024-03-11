@@ -83,7 +83,7 @@ public class TankFrame extends Frame {
 //            x+=200;
             // 刷新窗口
 //            repaint();
-            int keyCode = e.getKeyCode();
+//            int keyCode = e.getKeyCode();
             switch (e.getKeyCode()){
                 case KeyEvent.VK_LEFT:
 //                    x -= 10;
@@ -139,21 +139,27 @@ public class TankFrame extends Frame {
          * 设置方向
          */
         private void setMainTankDir() {
-            if(bL) {
+            if(!bL && !bR && !bU && !bD){
+                myTank.setMoving(false);
+            }else {
+                // make tank to move
+                myTank.setMoving(true);
+                if(bL) {
 //                dir = LEFT;
-                myTank.setDir(LEFT);
-            }
-            if(bR) {
+                    myTank.setDir(LEFT);
+                }
+                if(bR) {
 //                dir = RIGHT;
-                myTank.setDir(RIGHT);
-            }
-            if(bU) {
+                    myTank.setDir(RIGHT);
+                }
+                if(bU) {
 //                dir = Direction.UP;
-                myTank.setDir(UP);
-            }
-            if(bD) {
+                    myTank.setDir(UP);
+                }
+                if(bD) {
 //                dir = Direction.DOWN;
-                myTank.setDir(DOWN);
+                    myTank.setDir(DOWN);
+                }
             }
         }
     }
